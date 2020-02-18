@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en-us" class="theme-blue" >
+<head>
+	<!-- Global Include -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/head-content.html" -->
+	<title>Summary Health Statistics tables</title>
+	<link rel="shortcut icon" href="/TemplatePackage/4.0/assets/imgs/favicon.ico">
+	<!--<link rel="shortcut icon" href="/TemplatePackage/4.0/images/favicon.ico"> -->
+
+	<meta name="robots" content="index, archive" />
+                     <meta name="description" content=""/>		
+                     <meta name="keywords" content=""/>
+	<meta property="cdc:template_version" content="4.0"/>
+	<meta property="cdc:last_updated" content="August 27, 2018"/>
+	<meta property="cdc:last_reviewed" content="August 27, 2018"/>
+	<meta property="cdc:content_source" content="OFFICE OF THE ASSOCIATE DIRECTOR FOR COMMUNICATION"/>
+	<meta property="cdc:maintained_by" content="OFFICE OF THE ASSOCIATE DIRECTOR FOR COMMUNICATION"/>
+	<link rel="canonical" href="https://wcms-wp-test-br.cdc.gov/php-app-template/index.php"/>
+	<meta name="DC.date" content="2018-09-25T11:49:35Z/">
+	<!-- <meta
+    	name="site-metrics-settings"
+        content="This tag allows for the update/override of metrics settings via data-attributes. Please update the metrics attributes on this tag as needed for your site/page(s)"
+        data-metrics-channel=""/> -->
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues. More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- <title> Summary Health Statistics tables  </title> -->
+
+
+ <!-- <link rel="shortcut icon" href="nhis.png">-->
+
+
+ <!--   <link rel="icon" href="nhis.png" type="image/png">-->
+
+
+
+<!--    <link rel="stylesheet" href="datatables.min.css"> -->
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  -->
+
+   <link rel="stylesheet" href="/TemplatePackage/contrib/libs/datatables/1.10.18/datatables.min.css">
+
+<!--   <link rel="stylesheet" href="/TemplatePackage/contrib/libs/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+
+  <link rel="stylesheet" href="uswds.css">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="widget118.css">
+  <link rel="stylesheet" href="widgetbig058.css">
+   <link rel="stylesheet" href="bootstrap.min.css"> 
+ <!--  <link rel="stylesheet" href="960_12_col.css"> -->
+ <!--  <link rel="stylesheet" href="adapt.css"> -->
+
+
+
+
+
+  <!-- More ideas for your head section here: h5bp.com/d/head-Tips -->
+  <script>
+    var docready=[],$=function(){return{ready:function(fn){docready.push(fn)}}};
+  </script>
+
+ 
+
+
+
+
+
+
+
+
+</head>
+<body class="no-js">
+
+	<!-- Global Include -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/global-alert.html" -->
+	<div class="container-fluid header-wrapper">
+		<div class="container">
+			<header role="banner" aria-label="Header" class="pt-2 pb-2">
+				<div class="row">
+					<div class="col cdc-logo">
+						<!-- Global Include -->
+						<!--#include virtual="/TemplatePackage/4.0/includes/header-logo.html" -->
+					</div>
+				</div>
+	</div>
+
+		<div class="container-fluid site-title">
+		<div class="container">
+			<!-- Local Include -->	
+			<div class="display-6 text-white fw-500 pt-1 pb-1">
+				<a href="/nchs/">National Center for Health Statistics</a>
+			</div>
+
+		</div>
+		</div>
+
+	<!-- Page Content Wrap -->
+	<div class="container d-flex flex-wrap body-wrapper bg-white">
+		<!-- Content -->
+
+      <main id="main-content">
+
+         
+<div class="info-box ">
+  <div class="full-screen">
+    <h2>
+      Interactive Summary Health Statistics for Children
+      <img src="child1.png" alt="child healthcare clipboard" class="app-image"/>
+    </h2>
+    <p> Interactive summary health statistics based on the National Health Interview Survey are provided for selected health topics for children under age 18 years. Estimates can be grouped by demographic characteristics such as age, race, or sex and can be viewed over time. </p>
+    <p>
+  Use the options below to select a health topic, the data view ("Trends over time" or "Single year"), data years, and grouping variables. "Trends over time" allows for selecting a range of years. Both "Trends over time" and "Single year" views can be stratified by a grouping variable. Once a grouping variable is selected, a dropdown menu will appear, enabling selection of specific levels in each group.</p>
+    <p>
+  After selecting the available options, the table or chart will automatically be updated.</p>
+  </div>
+</div>
+<div class="row full-screen">
+  <div class="col-sm-12 col-md-3" id="meps-form-container">
+    <form class="usa-form-large">
+      <label for="stat_var">Select topic:</label>
+      <select id="stat_var"><optgroup label="Asthma">
+<option value="crd_ever_asthma" selected>Ever having asthma</option>
+<option value="crd_curr_asthma">Current asthma</option>
+</optgroup>
+<optgroup label="Selected Allergies">
+<option value="crd_Food allergies">Food allergies</option>
+<option value="crd_Hay fever">Hay fever</option>
+<option value="crd_Respiratory alle">Respiratory allergies</option>
+<option value="crd_Skin allergies">Skin allergies</option>
+</optgroup>
+<optgroup label="ADHD">
+<option value="crd_add">Ever having attention-deficit/hyperactivity disorder</option>
+</optgroup>
+<optgroup label="Learning Disability">
+<option value="crd_ld">Ever having a learning disability</option>
+</optgroup>
+<optgroup label="Prescription Medication">
+<option value="crd_prescription">Taking prescription medication regularly for at least 3 months</option>
+</optgroup>
+<optgroup label="Health Status">
+<option value="crd_Fair or poor">Fair or poor health status</option>
+</optgroup>
+<optgroup label="School Absences">
+<option value="crd_11plus_days">Missing 11 or more school days due to illness or injury</option>
+</optgroup>
+<optgroup label="Health Care Access and Utilization">
+<option value="crd_nopoc">Not having a usual place of health care</option>
+<option value="crd_haspoc">Having a usual place of health care</option>
+<option value="crd_delayed">Delayed health care due to cost</option>
+<option value="crd_unmet">Unmet medical need due to cost</option>
+<option value="crd_none">No emergency room visits</option>
+<option value="crd_two">Two or more emergency room visits</option>
+<option value="crd_nounmet">Not having unmet dental need due to cost</option>
+<option value="crd_unmet_dt">Having unmet dental need due to cost</option>
+</optgroup>
+<optgroup label="Special Education or Early Intervention">
+<option value="crd_sped">Receiving special education or early intervention services</option>
+</optgroup></select>
+      <input id="showSEs" type="checkbox" name="showSEs" value="showSEs" class=""/>
+      <label for="showSEs">Show standard errors (for percentages)</label>
+      <fieldset id="data-view" class="usa-fieldset-inputs usa-sans shiny-input-radiogroup em-fieldset">
+        <legend class="em-legend">Select data view:</legend>
+ <!--      <ul class="usa-unstyled-list">   -->
+  <!--                <div class="shiny-options-group"> -->
+   <!--            <li style="display: inline-block; padding-right: 30px;"> -->
+              <input id="data-view-trend" type="radio" name="data-view" value="trend" checked="checked"/>
+              <label for="data-view-trend">Trends over time</label>
+   <!--               </li>     -->
+    <!--           <li style="display: inline-block; padding-right: 30px;">   -->
+              <input id="data-view-cross" type="radio" name="data-view" value="cross"/>
+              <label for="data-view-cross">Single year</label>
+   <!--           </li>   -->
+    <!--           </div>  -->
+    <!--          </ul>   -->
+      </fieldset>
+      <fieldset>
+        <legend class="usa-sr-only">Select years</legend>
+        <div class="flex-parent">
+          <div class="flex-child-fill year-start">
+            <label for="year-start">Year:</label>
+            <select id="year-start"><option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015" selected>2015</option></select>
+          </div>
+          <div class="flex-child-fill year-main">
+            <label for="year">to:</label>
+            <select id="year"><option value="2018" selected>2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option></select>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="">
+        <label for="col_var" class="">Group by (columns):</label>
+        <div role="group">
+          <div role="group">
+            <select id="col_var"><optgroup label="Demographic characteristics">
+<option value="ind" selected>Total</option>
+<option value="sex">Sex</option>
+<option value="agegrps">Age groups</option>
+<option value="race">Race</option>
+<option value="hisprace">Hispanic or Latino origin and race</option>
+<option value="family">Family structure</option>
+<option value="education">Parental education</option>
+<option value="msa">Place of residence</option>
+<option value="region">Region</option>
+</optgroup>
+<optgroup label="Socio-economic characteristics">
+<option value="income">Family income</option>
+<option value="poverty">Poverty status</option>
+<option value="insurance">Health insurance coverage</option>
+</optgroup></select>
+          </div>
+          <div>
+            <div class="dropdown black-text" id="colDrop">
+              <button type="button" class="usa-accordion-button dropdown-toggle shiny-bound-input arrow-button" data-toggle="dropdown" aria-expanded="false">Select Levels</button>
+              <ul class="dropdown-menu dropdown-menu-form" aria-labelledby="colDrop">
+                <fieldset id="colLevels" class="usa-fieldset-inputs usa-sans shiny-input-checkboxgroup">
+                  
+                  <legend class="usa-sr-only"></legend>
+                  <ul class="usa-unstyled-list">
+                    <div class="shiny-options-group">
+                      <li>
+                        <input id="colLevels-" type="checkbox" name="colLevels" value=""/>
+                        <label for="colLevels-"></label>
+                      </li>
+                    </div>
+                  </ul>
+                </fieldset>
+                <button class="action-button  usa-button-outline" id="colReset" type="button">Reset</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="hide-if-trend">
+        <fieldset class="">
+          <label for="row_var" class="">Group by (rows):</label>
+          <div role="group">
+            <div role="group">
+              <select id="row_var"><optgroup label="Number or Percentage">
+<option value="ind" selected>(none)</option>
+</optgroup></select>
+            </div>
+            <div>
+              <div class="dropdown black-text" id="rowDrop">
+                <button type="button" class="usa-accordion-button dropdown-toggle shiny-bound-input arrow-button" data-toggle="dropdown" aria-expanded="false">Select Levels</button>
+                <ul class="dropdown-menu dropdown-menu-form" aria-labelledby="rowDrop">
+                  <fieldset id="rowLevels" class="usa-fieldset-inputs usa-sans shiny-input-checkboxgroup">
+                    
+                    <legend class="usa-sr-only"></legend>
+                    <ul class="usa-unstyled-list">
+                      <div class="shiny-options-group">
+                        <li>
+                          <input id="rowLevels-" type="checkbox" name="rowLevels" value=""/>
+                          <label for="rowLevels-"></label>
+                        </li>
+                      </div>
+                    </ul>
+                  </fieldset>
+                  <button class="action-button  usa-button-outline" id="rowReset" type="button">Reset</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="action-button  usa-button" id="switchRC" type="button">Switch rows/columns</button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-sm-12 col-md-9">
+    <ul id="meps-tabs" class="nav nav-pills">
+      <li class="active">
+        <a data-toggle="tab" href="#table-tab" id="table-pill">
+          <span class="tab-title table-tab">Table</span>
+        </a>
+      </li>
+      <li class="">
+        <a data-toggle="tab" href="#plot-tab" id="plot-pill">
+          <span class="tab-title plot-tab">Charts</span>
+        </a>
+      </li>
+      <li class="">
+        <a data-toggle="tab" href="#code-tab" id="code-pill">
+          <span class="tab-title code-tab">More information</span>
+        </a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div id="updating-overlay">
+        <div id="updating-text">Updating, please wait...</div>
+      </div>
+      <div id="table-tab" class="tab-pane active">
+        <div class="caption-block">
+          <a id="dl-table" title="" data-original-title="Download table" tabindex="0" class="em-tooltip usa-button download-button">
+            <span class="usa-sr-only">Download table</span>
+          </a>
+          <span id="table-caption" role="region" aria-live="polite" class="caption"></span>
+        </div>
+        <div id="loading">Loading data...</div>
+        <table id="meps-table" cellspacing="0" width="100%"></table>
+        <div id="table-footnotes" role="region" aria-live="polite">
+          <span id="table-caption2"></span>
+          <h3>Notes</h3>
+          <span id="table-caption3"></span>
+            <span id="notes"></span>  
+        <p>Based on household interviews of a sample of the civilian noninstitutionalized population. Estimates for fair or poor health status, delayed health care due to cost, being uninsured for health care, and unmet medical need due to cost, are based on responses about all children in the family, not only the sample child. Data for these topics came from the Person File and were weighted using the Person weight. Estimates for all other health topics are based on responses about the sample child, not all children in the family. Data for these topics came from the Sample Child File and were weighted using the Sample Child weight. Unknowns were not included in the denominators when calculating percentages.
+        
+       For more information on the data source, methods, and definitions used for this table,
+refer to Technical Notes for Summary Health Statistics Tables: National Health Interview Survey
+          <a href="https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf" target="_blank_">
+          (available from:  https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf)</a></p>
+          <h3>Suggested citation</h3>
+          <div id="citation"></div>
+          <div id="source"></div>
+        </div>
+      </div>
+      <div id="plot-tab" class="tab-pane">
+        <div class="caption-block plot-dependent">
+          <a id="dl-plot" title="" data-original-title="Download plot" tabindex="0" class="em-tooltip usa-button download-button">
+            <span class="usa-sr-only">Download plot</span>
+          </a>
+          <span id="plot-caption" role="region" aria-live="polite" class="caption"></span>
+        </div>
+        <div id="meps-plot" class="plot-dependent"></div>
+        <div id="plot-warning">No non-missing data available for selections. Please try again.</div>
+        <div id="plot-footnotes" class="in-front plot-dependent" role="region" aria-live="polite"></div>
+        <h3>Notes</h3>
+        <span id="plot-caption3"></span>
+        <p>Based on household interviews of a sample of the civilian noninstitutionalized population.
+Estimates are based on responses about the sample child, not all children in the family. 
+Unless otherwise noted, data came from the Sample Child File and were weighted using the Sample Child weight.
+Unknowns were not included in the denominators when calculating percentages.
+        
+       For more information on the data source, methods, and definitions used for this table,
+refer to Technical Notes for Summary Health Statistics Tables: National Health Interview Survey
+        <a href="https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf" target="_blank_">
+        (available from:  https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf)</a></p>
+        <h3>Suggested citation</h3>
+        <div id="plotcitation"></div>
+        <div id="plotsource"></div>
+      </div>
+      <div id="code-tab" class="tab-pane">
+        <h3>Summary Health Statistics</h3>
+        <p>Summary Health Statistics are tables of descriptive statistics for various health measures including health status,
+        conditions, health behaviors, activity limitations, health insurance coverage, and access and utilization of health care.
+        Measures are shown for selected characteristics such as sex, age, race, ethnicity, family income, and region of the 
+        United States. Starting with the 2013 NHIS, Summary Health Statistics are provided in online tables. For the 1997-2012 NHIS,
+        Summary Health Statistics were provided in three Vital and Health Statistics Series 10 Reports (one each for adults,
+        children, and the whole population), and for the 1962-1996 NHIS, similar descriptive statistics were provided in Current 
+        Estimates reports, which were also Vital and Health Statistics Series 10 Reports.</p> 
+        
+        For more information on the data source, methods, and definitions used for this table, refer to Technical Notes for
+        Interactive Summary Health Statistics: National Health Interview Survey 
+        <a href="https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf" target="_blank_">(available from:  https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf)</a> 
+        
+        <p>Previous year Summary Health Statistics may be accessed by clicking the links below:</p> 
+        <p><a href="https://www.cdc.gov/nchs/nhis/shs/tables.htm">Tables of Summary Health Statistics (2013 NHIS and forward)</a></p>
+        <p><a href="https://www.cdc.gov/nchs/nhis/SHS_1997_2012.htm">Summary Health Statistics Vital and Health Statistics Series 10 Reports (1997&ndash;2012 NHIS)</a></p>
+        <p><a href="https://www.cdc.gov/nchs/nhis/quest_doc.htm">Current Estimates Vital and Health Statistics Series 10 Reports (1962&ndash;1996 NHIS)</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     </main>
+
+
+		<!-- Left / Bottom Nav -->
+
+
+
+
+
+	</div>
+
+<div>
+            <a class = 'right usa-button usa-button-big usa-button-outline external-link'
+
+               href="https://github.com/HHS-NHIS/SHS_TABLES_CHILDREN" target="_blank">
+
+              View on GitHub <img src="externallink.gif" alt="External Link" height="14" width="14">
+
+            </a>
+
+
+
+            <a class = 'right usa-button usa-button-big usa-button-secondary'
+
+               href = 'mailto:niw2@cdc.gov?Subject=NHIS%20summary%20tables'>
+
+              Send feedback
+
+            </a>
+
+          </div>
+	   </div>
+
+<footer role="contentinfo" aria-label="Footer">
+
+	<!-- (21) Footer -->
+	<div class="container-fluid footer-wrapper">
+		<div class="container">
+			<!-- Begin included content (from /TemplatePackage/4.0/includes/footer-slim.html) -->
+			<div class="row footer-slim" itemscope="itemscope" itemtype="https://schema.org/Organization">
+	<div class="col-md-6 mt-1 mt-md-0">
+		<ul class="list-inline pb-0 mb-0">
+			<li class="list-inline-item mr-5"><a href="https://www.cdc.gov/about/default.htm">About CDC</a></li>
+			<li class="list-inline-item mr-5"><a href="https://www.cdc.gov/other/privacy.html">Privacy</a></li>
+			<li class="list-inline-item mr-5"><a href="https://www.cdc.gov/od/foia">FOIA</a></li>
+			<li class="list-inline-item mr-5"><a href="https://www.hhs.gov">U.S. Department of Health &amp; Human Services</a></li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<ul class="list-inline pb-0 mb-0">
+			<li class="list-inline-item mr-5"><a href="https://www.hhs.gov/open/">HHS/Open</a></li>
+			<li class="list-inline-item mr-5"><a href="https://www.usa.gov/">USA.gov</a></li>
+			<li class="list-inline-item mr-5"><a href="https://www.cdc.gov/Other/disclaimer.html" class="footer-ext">CDC Website Exit Disclaimer</a> <span class="sr-only">external icon</span><span class="fi cdc-icon-external x16" aria-hidden="true"></span></li>
+		</ul>
+	</div>
+</div>
+
+			<!-- End included content (from /TemplatePackage/4.0/includes/footer-slim.html) -->
+		</div>
+	</div>
+
+</footer>
+	<!-- Global includes -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/social-media-footer.html" -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/metrics.html" -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/scripts.html" -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/svg-symbols.html" -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/svg-round-social.html" -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/svg-white-social.html" -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/svg-audio.html" -->
+	<!--#include virtual="/TemplatePackage/4.0/includes/svg-other.html" -->
+
+	<!-- Add your page or site specific javascript here -->
+
+	<!-- Add any page or site specific metrics properties here -->
+
+<script>
+s.pageName=document.title; 
+s.channel="NCHS";
+</script>
+
+<script>
+	window.shortTitle = "";
+	window.pageOptions = window.pageOptions || {};
+	window.pageOptions.navigation = window.pageOptions.navigation || { fourthLevelNavTitle: "Table of Contents", showFourthLevel: true	};
+	window.pageOptions.navigation.breadcrumbs = {
+		mode: 'auto',
+		showCurrentPage: false
+	};
+	window.CDC.tp4.public.appInit(window.pageOptions);
+</script>
+
+<!--#include virtual="/TemplatePackage/4.0/includes/page-bottom-extras.html" -->
+<!-\jquery-datatables-->
+
+<!--   <link rel="stylesheet" href="/TemplatePackage/contrib/libs/datatables/1.10.18/dataTables.min.js">   -->   
+
+<!--    <link rel="stylesheet" href="/TemplatePackage/contrib/libs/datatables/1.10.18/js/jquery.dataTables.js">   -->
+<!--    <link rel="stylesheet" href="/TemplatePackage/contrib/libs/jquery-datatables/jquery.dataTables.1.10.3.js">  -->
+<!--     <link rel="stylesheet" href="/TemplatePackage/contrib/libs/datatables/1.10.18/datatables.min.js">  -->
+   <script src = "datatables.min.js"></script> 
+  <script src = "plotly-latest.min.js"></script>
+
+  <script src = "uswds.min.js"></script>
+
+
+
+  <script type="text/javascript" src="rgbcolor.js"></script>
+
+  <script type="text/javascript" src="StackBlur.js"></script>
+
+  <script type="text/javascript" src="canvg.js"></script>
+
+
+
+  <script type="text/javascript" src="basic.js"></script>
+ 
+<script src="functions.js"></script>
+<script src="init.js"></script>
+<script src="notes.js"></script>
+<script src="em.js"></script>
+
+</body>
+</html>
