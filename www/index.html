@@ -3,7 +3,7 @@
 <head>
     <!-- Global Include -->
     <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/head-content.html" -->
-    <title>Summary Health Statistics</title>
+    <title>NHIS-Child Summary Health Statistics</title>
 
     <!--<link rel="shortcut icon" href="cdcfavicon.ico">-->
     <!--<link rel="shortcut icon" href="/NHISDataQueryTool/TemplatePackage/4.0/images/favicon.ico">-->
@@ -67,10 +67,10 @@
                 <div class="info-box ">
                     <div class="full-screen">
                         <h2>
-                            Interactive Summary Health Statistics for Children &#8212 2019-2021
+                            Interactive Summary Health Statistics for Children<!--&#8212 2019-2021-->
                             <img src="icon_ins.png" alt="healthcare clipboard" class="app-image" />
                         </h2>
-                        <p>Interactive Summary Health Statistics for Children &#8212 2019-2021 provide annual estimates of selected health topics for children under age 18 years based on final data from the National Health Interview Survey. Estimates can be grouped by characteristics such as age, race, or sex by clicking on the "Group by" dropdown menu.</p>
+                        <p>Interactive Summary Health Statistics for Children provide annual estimates of selected health topics for children under age 18 years based on final data from the National Health Interview Survey. Estimates can be grouped by characteristics such as age, race, or sex by clicking on the "Group by" dropdown menu.</p>
 
                         <p>
                             After you select the available health topics, the table will automatically be updated. The data can be viewed as a plot under the "Charts" tab, with line graphs for trends over time and grouped bar graphs for the cross-sectional view. The "Technical Notes" tab displays links to previous data releases as well as technical documentation on the measures and methodology used to produce the estimates. The generated table and graph can be downloaded with the download button <img height="25px" src="download-white.png"> under each tab. To view the Korn-Graubard confidence intervals, select the "Show 95% confidence intervals" checkbox.
@@ -138,12 +138,14 @@
                                             <option value="2019" selected>2019</option>
                                             <option value="2020">2020</option>
                                             <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
                                         </select>
                                     </div>
                                     <div class="flex-child-fill year-main">
                                         <label for="year">to:</label>
                                         <select id="year">
-                                            <option value="2021" selected>2021</option>
+                                            <option value="2022" selected>2022</option>
+                                            <option value="2021">2021</option>                                            
                                             <option value="2020">2020</option>
                                             <option value="2019">2019</option>
                                         </select>
@@ -160,7 +162,7 @@
                                                 <option value="sex">Sex</option>
                                                 <option value="agegrps">Age</option>
                                                 <option value="race">Race</option>
-                                                <option value="hisprace">Hispanic or Latino origin</option>
+                                                <option value="hisprace">Hispanic or Latino origin and race</option>
                                                 <option value="family">Family structure</option>
                                                 <option value="disability">Disability status</option>
                                                 </optgroup>
@@ -278,7 +280,8 @@
                                     <!--       <span id="table-caption3"></span>  -->
                                     <br>
                                     <span id="notes"></span>
-                                    <br></br>
+                                    <br>
+                                    <br>
                                     <p>
                                         Based on household interviews of a sample of the civilian noninstitutionalized population. Estimates are based on responses about the sample child,
                                         not all children in the family. Data came from the Sample Child File and were weighted using the Sample Child weight.
@@ -324,7 +327,8 @@
                                 <br>
                                 <span id="plotnotes"></span>
                                 <br>
-                                <!--     <span id="plot-caption3"></span> -->
+                                <p>
+                                    <!--     <span id="plot-caption3"></span> -->
                                 <p>
                                     Based on household interviews of a sample of the civilian noninstitutionalized population. Estimates are based on responses about the sample child,
                                     not all children in the family. Data came from the Sample Child File and were weighted using the Sample Child weight.
